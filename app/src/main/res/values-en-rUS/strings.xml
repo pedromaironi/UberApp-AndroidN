@@ -1,5 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Uber</string>
     <string name="select_an_option">Select an option</string>
     <string name="Driver">Conductor</string>
     <string name="client">CLIENT</string>
@@ -7,7 +7,6 @@
     <string name="RegisterNow">REGISTER NOW</string>
     <string name="Fullname">Full name</string>
     <string name="email">Email</string>
-    <string name="password">Password</string>
     <string name="Register">Register</string>
     <string name="confirmpassword">Confirm password</string>
 </resources>
