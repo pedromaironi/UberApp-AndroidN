@@ -9,4 +9,7 @@
     <string name="email">Email</string>
     <string name="Register">Register</string>
     <string name="confirmpassword">Confirm password</string>
+    <string name="Login">Login</string>
+    <string name="logo">Logo</string>
+    <string name="uber_clone_es_un_aplicativo_similar_a_uber">Uber clone is an application similar to uber</string>
 </resources>

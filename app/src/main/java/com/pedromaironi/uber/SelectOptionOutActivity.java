@@ -12,11 +12,16 @@ public class SelectOptionOutActivity extends AppCompatActivity {
 
     Toolbar mToolbar;
     Button mbuttonRegister;
+    Button mbuttonLogin;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select_option_out);
+
         mbuttonRegister = findViewById(R.id.RegisterNow);
+        mbuttonLogin = findViewById(R.id.IHaveAccount);
+
         mToolbar = findViewById(R.id.toolbar);
         setSupportActionBar(mToolbar);
         getSupportActionBar().setTitle("Select option");
@@ -29,6 +34,19 @@ public class SelectOptionOutActivity extends AppCompatActivity {
                 goToRegisterUser();
             }
         });
+
+        mbuttonLogin.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                goToLogin();
+            }
+        });
+    }
+
+    private void goToLogin() {
+        Intent intent = new Intent(SelectOptionOutActivity.this, LoginActivity.class);
+        startActivity(intent);
     }
 
     private void goToRegisterUser() {

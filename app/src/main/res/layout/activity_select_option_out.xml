@@ -1,43 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    android:background="@color/colorPrimary"
+    android:background="@color/colorWhiteLight"
     tools:context=".SelectOptionOutActivity">
 
     <include layout="@layout/action_bar_toolbar" />
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:gravity="center"
-        >
+
 
         <ImageView
+            android:id="@+id/ImageView"
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:src="@drawable/ic_car_red"
-            android:layout_gravity="center"
-            android:layout_marginTop="50dp"
+            android:contentDescription="@string/logo"
+            android:layout_marginTop="150dp"
+            android:layout_marginStart="6dp"
+            android:layout_marginEnd="6dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-            />
 
-
-        <TextView
+    <TextView
+        android:id="@+id/textViewOne"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/colorWhite"
+            android:fontFamily="@font/mregular"
+            android:textColor="@color/colorBlack"
             android:text="@string/select_an_option"
             android:textAlignment="center"
-            android:layout_margin="40dp"
             android:textSize="20sp"
-            android:textStyle="bold"
-            />
+            android:layout_marginTop="50dp"
+            android:layout_marginStart="6dp"
+            android:layout_marginEnd="6dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ImageView" />
 
-        <Button
+    <Button
             android:id="@+id/IHaveAccount"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -45,25 +50,32 @@
             android:background="@drawable/rounded_button"
             android:backgroundTint="@color/colorAccent"
             android:textColor="@color/colorWhite"
-            android:layout_marginRight="30dp"
-            android:layout_marginLeft="30dp"
-            />
+            android:layout_marginTop="100dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewOne"
+            app:layout_constraintBottom_toBottomOf="@+id/RegisterNow"
+        />
 
-        <Button
+    <Button
             android:id="@+id/RegisterNow"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/rounded_button"
-            android:backgroundTint="@color/colorWhite"
+            android:backgroundTint="@color/colorPrimaryDark"
             android:text="@string/RegisterNow"
-            android:textColor="@color/colorBlack"
-            android:layout_marginRight="30dp"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="10dp"
-            />
+            android:textColor="@color/colorWhite"
+            android:layout_marginTop="50dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+        android:layout_marginBottom="60dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/IHaveAccount"
+            app:layout_constraintBottom_toBottomOf="parent"
+        />
 
 
-
-    </LinearLayout>
-
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
